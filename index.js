@@ -17,14 +17,14 @@ const createDate = (date, index) => {
       const parsedDate = Date.parse(element);
 
       // Push parsed date to variable 'unsortedDate'
-      unsortedDate.push(parsedDate / 1000);
+      unsortedDate.push((parsedDate / 1000).toString());
   }
 
   // Conditional for index
   let sortedDate = [];
   if (index === undefined) {
       unsortedDate.sort((a, b) => a - b)
-      sortedDate = unsortedDate.join(' - ')
+      sortedDate = unsortedDate.join('-')
       return sortedDate;
   } else {
       unsortedDate.sort((a, b) => a + b);
