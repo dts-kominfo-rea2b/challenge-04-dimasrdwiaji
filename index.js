@@ -17,7 +17,7 @@ const createDate = (date, index) => {
       const parsedDate = Date.parse(element);
 
       // Push parsed date to variable 'unsortedDate'
-      unsortedDate.push(parsedDate);
+      unsortedDate.push(parsedDate / 1000);
   }
 
   // Conditional for index
